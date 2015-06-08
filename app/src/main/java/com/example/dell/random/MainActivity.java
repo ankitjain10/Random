@@ -51,7 +51,7 @@ public class MainActivity extends ActionBarActivity {
                     guessText.setText("!!Sorry, Try again!!");
                 }
 //Clear the EditText again
-                inputText.setText("");
+                inputText.setText("0");
             }
         });
     }
