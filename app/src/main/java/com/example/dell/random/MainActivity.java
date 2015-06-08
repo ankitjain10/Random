@@ -23,23 +23,24 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//Declare the widgets!
         guessText=(TextView)findViewById(R.id.guessText);
         inputText=(EditText)findViewById(R.id.inputText);
         randomButton=(Button)findViewById(R.id.randomButton);
         resultText =(TextView)findViewById(R.id.resultText);
-
-        String result=inputText.getText().toString();
+//Fetch String from EditText
+       /* String result=inputText.getText().toString();*/
+//OnButtonClick Method
         randomButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Random random=new Random();
                 final int  randomNum=random.nextInt(6)+1;
-                String disp= "";
-                disp=Integer.toString(randomNum);
-                resultText.setText("Number Generated is : " + disp);
+                String randomNumString;
+                randomNumString=Integer.toString(randomNum);
+                resultText.setText("Number Generated is : " + randomNumString);
 
-
+//compare guessed number with Random Number.
                 final int numcomp= Integer.parseInt(inputText.getText().toString());
                 if(numcomp==randomNum){
                     guessText.setTextColor(Color.GREEN);
@@ -49,11 +50,9 @@ public class MainActivity extends ActionBarActivity {
                     guessText.setTextColor(Color.RED);
                     guessText.setText("!!Sorry, Try again!!");
                 }
+//Clear the EditText again
                 inputText.setText("");
             }
         });
     }
-
-
-
 }
