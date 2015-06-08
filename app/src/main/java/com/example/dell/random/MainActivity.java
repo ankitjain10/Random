@@ -35,7 +35,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Random random=new Random();
-                final int  randomNum=random.nextInt(6)+1;
+                int  randomNum=random.nextInt(6)+1;
                 String randomNumString;
                 randomNumString=Integer.toString(randomNum);
                 resultText.setText("Number Generated is : " + randomNumString);
