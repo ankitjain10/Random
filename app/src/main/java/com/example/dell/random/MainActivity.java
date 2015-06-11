@@ -42,7 +42,10 @@ public class MainActivity extends ActionBarActivity {
 
 //compare guessed number with Random Number.
                 final int numcomp= Integer.parseInt(inputText.getText().toString());
-                if(numcomp==randomNum){
+                if(numcomp<1 ||numcomp>6 ) {
+                    guessText.setTextColor(Color.BLUE);
+                    guessText.setText("!!Please Enter Number 1-6 !!");
+                }else if(numcomp==randomNum){
                     guessText.setTextColor(Color.GREEN);
                     guessText.setText("!!Number Matched!!");
                 }
@@ -53,6 +56,7 @@ public class MainActivity extends ActionBarActivity {
 //Clear the EditText again
                 inputText.setText("0");
             }
+
         });
     }
 }
