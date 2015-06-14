@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dell.random" >
 
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -40,10 +42,40 @@
         </activity>
         <activity
             android:name=".Camera"
-            android:screenOrientation="portrait"
-             >
+            android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name=".Data"
+            android:label="@string/title_activity_data" >
+        </activity>
+        <activity
+            android:name=".RadioButton"
+            android:label="@string/title_activity_radio_button" >
+        </activity>
+        <activity
+            android:name=".Menutesting"
+            android:label="@string/title_activity_menutesting" >
+        </activity>
+        <activity
+            android:name=".Abouut"
+            android:label="@string/title_activity_about_us"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="com.example.dell.random.AboutUs" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".pref"
+            android:label="@string/title_activity_preferences"
+            android:theme="@android:style/Theme.Holo.Light" >
+            <intent-filter>
+                <action android:name="com.example.dell.random.Preferences" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
-<uses-permission android:name="android.permission.SET_WALLPAPER"/>
+
 </manifest>

@@ -30,7 +30,7 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Click to Generate Random Number"
+        android:background="@drawable/custom"
         android:id="@+id/randomButton"
         android:layout_below="@id/inputText"
         android:layout_centerHorizontal="true"
